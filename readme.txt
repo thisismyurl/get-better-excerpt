@@ -11,6 +11,8 @@ The Get Better Excerpt plugin works almost identical to the built in get_the_exc
 
 == Description ==
 
+ARCHIVED: This plugin is no longer actively maintained. It is provided as-is for legacy installs, and active support/testing is not guaranteed.
+
 ** this plugin is no longer being update. Please feel free to adopt me! **
 
 
