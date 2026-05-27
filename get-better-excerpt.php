@@ -3,7 +3,7 @@
  * Plugin Name:       Get Better Excerpt
  * Plugin URI:        https://thisismyurl.com/plugins/get-better-excerpt/
  * Description:       Returns the excerpt using whole words instead of partial words.
- * Version:           2.0.0
+ * Version:           2.6147
  * Requires at least: 5.0
  * Requires PHP:      7.4
  * Author:            Christopher Ross

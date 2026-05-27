@@ -4,14 +4,13 @@ Plugin URI: http://thisismyurl.com/downloads/get-better-excerpt/
 Tags: wordpress,theme,excerpt,words, plugin, post, posts, adopt-me
 Donate link:  http://thisismyurl.com/
 Requires at least: 3.2.0
-Tested up to: 6.9
-Stable tag: 2.0.0
+Tested up to: 7.0
+Stable tag: 2.6147
 
 The Get Better Excerpt plugin works almost identical to the built in get_the_excerpt() and the_excerpt() functions except it returns whole words instead of cutting off the excerpt as the existing function does.
 
 == Description ==
 
-ARCHIVED: This plugin is no longer actively maintained. It is provided as-is for legacy installs, and active support/testing is not guaranteed.
 
 ** this plugin is no longer being update. Please feel free to adopt me! **
 
