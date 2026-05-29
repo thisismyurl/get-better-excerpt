@@ -1,8 +1,8 @@
 === Get Better Excerpt ===
 Contributors: christopherross
-Plugin URI: http://thisismyurl.com/downloads/get-better-excerpt/
+Plugin URI: https://thisismyurl.com/downloads/get-better-excerpt/
 Tags: excerpt, words, post, posts, the_excerpt
-Donate link:  http://thisismyurl.com/
+Donate link:  https://thisismyurl.com/
 Requires at least: 5.0
 Tested up to: 7.0
 Stable tag: 2.6147
@@ -13,16 +13,16 @@ The Get Better Excerpt plugin works almost identical to the built in get_the_exc
 
 The Get Better Excerpt plugin works almost identically to the built-in get_the_excerpt() and the_excerpt() functions, except it returns whole words instead of cutting off the excerpt mid-word as the existing function does.
 
-This plugin is maintained by Christopher Ross, http://thisismyurl.com or you can find him on Twitter at http://twitter.com/thisismyurl/
+This plugin is maintained by Christopher Ross, https://thisismyurl.com
 
 == Installation ==
 
-To install the plugin, please upload the folder to your plugins folder and active the plugin.
+To install the plugin, please upload the folder to your plugins folder and activate the plugin.
 
 == Screenshots ==
 
 == Updates ==
-Updates to the plugin will be posted here, to [thisismyurl.com](http://thisismyurl.com/downloads/get-better-excerpt/)
+Updates to the plugin will be posted here, to [thisismyurl.com](https://thisismyurl.com/downloads/get-better-excerpt/)
 
 == Frequently Asked Questions ==
 
@@ -76,7 +76,7 @@ Finally, if you'd like to copy the results into a variable you can return the re
 
 
 == Donations ==
-If you would like to donate to help support future development of this tool, please visit [thisismyurl.com](http://thisismyurl.com/downloads/get-better-excerpt/)
+If you would like to donate to help support future development of this tool, please visit [thisismyurl.com](https://thisismyurl.com/downloads/get-better-excerpt/)
 
 
 == Change Log ==
