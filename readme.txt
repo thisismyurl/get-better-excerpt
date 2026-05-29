@@ -5,7 +5,7 @@ Tags: excerpt, words, post, posts, the_excerpt
 Donate link:  https://thisismyurl.com/
 Requires at least: 5.0
 Tested up to: 7.0
-Stable tag: 2.6147
+Stable tag: 2.6148.2110
 
 The Get Better Excerpt plugin works almost identical to the built in get_the_excerpt() and the_excerpt() functions except it returns whole words instead of cutting off the excerpt as the existing function does.
 
