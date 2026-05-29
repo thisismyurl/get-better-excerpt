@@ -1,32 +1,28 @@
 === Get Better Excerpt ===
 Contributors: christopherross
-Plugin URI: http://thisismyurl.com/downloads/get-better-excerpt/
-Tags: wordpress,theme,excerpt,words, plugin, post, posts, adopt-me
-Donate link:  http://thisismyurl.com/
-Requires at least: 3.2.0
+Plugin URI: https://thisismyurl.com/downloads/get-better-excerpt/
+Tags: excerpt, words, post, posts, the_excerpt
+Donate link:  https://thisismyurl.com/
+Requires at least: 5.0
 Tested up to: 7.0
-Stable tag: 2.6147
+Stable tag: 2.6148.2110
 
 The Get Better Excerpt plugin works almost identical to the built in get_the_excerpt() and the_excerpt() functions except it returns whole words instead of cutting off the excerpt as the existing function does.
 
 == Description ==
 
+The Get Better Excerpt plugin works almost identically to the built-in get_the_excerpt() and the_excerpt() functions, except it returns whole words instead of cutting off the excerpt mid-word as the existing function does.
 
-** this plugin is no longer being update. Please feel free to adopt me! **
-
-
-The Get Better Excerpt plugin works almost identical to the built in get_the_excerpt() and the_excerpt() functions except it returns whole words instead of cutting off the excerpt as the existing function does.
-
-This plugin is maintained by Christopher Ross, http://thisismyurl.com or you can find him on Twitter at http://twitter.com/thisismyurl/
+This plugin is maintained by Christopher Ross, https://thisismyurl.com
 
 == Installation ==
 
-To install the plugin, please upload the folder to your plugins folder and active the plugin.
+To install the plugin, please upload the folder to your plugins folder and activate the plugin.
 
 == Screenshots ==
 
 == Updates ==
-Updates to the plugin will be posted here, to [thisismyurl.com](http://thisismyurl.com/downloads/get-better-excerpt/)
+Updates to the plugin will be posted here, to [thisismyurl.com](https://thisismyurl.com/downloads/get-better-excerpt/)
 
 == Frequently Asked Questions ==
 
@@ -35,13 +31,13 @@ Updates to the plugin will be posted here, to [thisismyurl.com](http://thisismyu
 Insert the following code into your WordPress theme files: 
 
 = General results =
-Without passing any parameters, the plugin will return ten results or fewer depending on how many posts you have.
+Without passing any parameters, the plugin returns the excerpt for the current post in the loop, trimmed to the first 20 whole words.
 
  thisismyurl_get_better_excerpt();
 
 
 = Altering the before and after values =
-By default the plugin wraps your code in list item (&lt;li&gt;) tags but you can specify how to format the results using the following code:
+By default the plugin adds no wrapping markup. You can prepend and append your own markup with the before and after parameters:
 
  thisismyurl_get_better_excerpt('before=&lt;p&gt;&amp;after=&lt;/p&gt;');
 
@@ -80,10 +76,18 @@ Finally, if you'd like to copy the results into a variable you can return the re
 
 
 == Donations ==
-If you would like to donate to help support future development of this tool, please visit [thisismyurl.com](http://thisismyurl.com/downloads/get-better-excerpt/)
+If you would like to donate to help support future development of this tool, please visit [thisismyurl.com](https://thisismyurl.com/downloads/get-better-excerpt/)
 
 
 == Change Log ==
+
+= 2.6147 =
+
+* Security: shortcode-supplied before, after, and trail values are now escaped with wp_kses_post.
+* Fixed sentence mode discarding the final sentence when the text had fewer sentences than requested.
+* Reconciled the description and tags (removed the stale adopt-me banner; the plugin is actively maintained).
+* Corrected the FAQ to match the real defaults (20 words, no wrapping markup).
+* Synced "Requires at least" with the plugin header (5.0).
 
 = 2.0.0 =
 

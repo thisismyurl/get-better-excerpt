@@ -1,6 +1,6 @@
 # Get Better Excerpt
 
-[![WordPress](https://img.shields.io/badge/WordPress-3.2%2B-blue)](https://wordpress.org/plugins/get-better-excerpt/) [![License](https://img.shields.io/badge/License-GPL--2.0-blue)](LICENSE)
+[![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-blue)](https://wordpress.org/plugins/get-better-excerpt/) [![License](https://img.shields.io/badge/License-GPL--2.0-blue)](LICENSE)
 
 A drop-in replacement for `get_the_excerpt()` and `the_excerpt()` that returns whole words instead of mid-word cuts.
 
@@ -14,11 +14,11 @@ WordPress core truncates excerpts by character count, which can break a word in 
 
 ## Requirements
 
-- WordPress 3.2+
+- WordPress 5.0+
 
 ## Status
 
-Maintenance mode. The plugin is open for adoption — see the [WordPress.org listing](https://wordpress.org/plugins/get-better-excerpt/).
+Actively maintained. Bug reports and pull requests are welcome — see the [Issues](../../issues) tab.
 
 ## Changelog
 
