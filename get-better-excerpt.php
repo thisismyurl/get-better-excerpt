@@ -61,11 +61,26 @@ function thisismyurl_get_better_excerpt( $args = null ) {
 	$source_text = $option['skipexcerpt'] ? get_the_content() : get_the_excerpt();
 
 	if ( $sentence ) {
-		// Sentence-based trim: split on period, keep first N sentences.
-		$parts   = explode( '.', wp_strip_all_tags( $source_text ), $sentence + 1 );
-		// Discard the tail fragment (index $sentence) — keep only complete sentences.
-		array_pop( $parts );
-		$excerpt = implode( '.', $parts ) . '. ' . $trail;
+		// Sentence-based trim: split on period into at most N sentences plus the
+		// remaining tail. explode( '.', $text, N + 1 ) means the final element is
+		// the overflow tail only when the text actually has more than N sentences.
+		$parts = explode( '.', wp_strip_all_tags( $source_text ), $sentence + 1 );
+
+		// Drop the tail fragment only when one exists: the limit produced N + 1
+		// elements, so element N is genuine overflow. When the text had fewer
+		// sentences than requested, every element is a real sentence — keep them
+		// all rather than discarding the final one.
+		$trimmed = count( $parts ) > $sentence;
+		if ( $trimmed ) {
+			array_pop( $parts );
+		}
+
+		// Re-join, then normalise the tail to exactly one period (the source may
+		// already end in one, and the trailing split element is empty).
+		$excerpt = rtrim( implode( '.', $parts ), " ." ) . '.';
+		if ( $trimmed ) {
+			$excerpt .= $trail;
+		}
 	} else {
 		$excerpt = wp_trim_words( $source_text, $words, $trail );
 	}
@@ -123,6 +138,13 @@ function shortcode_handler( $atts ): string {
 
 	// Force show=false so the template function always returns.
 	$atts['show'] = false;
+
+	// Shortcodes are a lower-trust surface than template-tag callers: an author or
+	// contributor can supply before/after/trail in post content. Escape them with
+	// wp_kses_post so injected <script> is stripped while safe formatting markup survives.
+	$atts['before'] = wp_kses_post( (string) $atts['before'] );
+	$atts['after']  = wp_kses_post( (string) $atts['after'] );
+	$atts['trail']  = wp_kses_post( (string) $atts['trail'] );
 
 	return (string) thisismyurl_get_better_excerpt( $atts );
 }
